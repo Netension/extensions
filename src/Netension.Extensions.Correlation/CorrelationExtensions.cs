@@ -1,7 +1,7 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Netension.Extensions.Correlation;
 
-namespace Netension.Extensions.Correlation
+namespace Microsoft.Extensions.Hosting
 {
     public static class CorrelationExtensions
     {
