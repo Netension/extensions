@@ -25,7 +25,7 @@ namespace Netension.Extensions.Security
             var result = new SecureString(); 
             result.Clear();
 
-            foreach (char c in value.ToCharArray())
+            foreach (char c in value)
             {
                 result.AppendChar(c);
             }
