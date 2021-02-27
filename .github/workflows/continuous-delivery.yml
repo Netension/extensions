@@ -60,7 +60,7 @@ jobs:
           
       - name: Calculate Version
         id: calculate_version
-        uses: PaulHatch/semantic-version@v3.1.2
+        uses: PaulHatch/semantic-version@v4
           
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v1.7.2
