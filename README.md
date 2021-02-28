@@ -1,4 +1,4 @@
-![nuget-template](https://github.com/Netension/nuget-template/blob/develop/banner.png)
+![nuget-template](https://github.com/Netension/extensions/blob/develop/banner.png)
 __Description__
 
 ![Publish](https://github.com/Netension/extensions/workflows/Release/badge.svg)<br/>
