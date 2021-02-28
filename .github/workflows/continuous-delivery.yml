@@ -61,6 +61,8 @@ jobs:
       - name: Calculate Version
         id: calculate_version
         uses: PaulHatch/semantic-version@v4
+        with:
+          format: "${major}.${minor}.${patch}-prerelease.${increment}"
           
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v1.7.2
