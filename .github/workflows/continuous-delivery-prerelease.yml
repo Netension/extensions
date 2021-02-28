@@ -1,12 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Publish
+name: Prerelease
 
 # Controls when the action will run. Triggers the workflow on push or pull request
 # events but only for the develop branch
 on:
   push:
-    branches: ['develop']
+    branches: [develop]
 
 env:
   SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
@@ -30,6 +30,9 @@ jobs:
         with:
           fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
           
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v1.7.2
+
       - name: Install SonarCloud scanner
         if: steps.cache-sonar-scanner.outputs.cache-hit != 'true'
         shell: pwsh
@@ -67,7 +70,7 @@ jobs:
         uses: actions/setup-dotnet@v1.7.2
         
       - name: Pack
-        run: dotnet pack ./src/*.sln -p:PackageVersion=${{ steps.calculate_version.outputs.version }} --configuration Release --output ./artifacts
+        run: dotnet pack ./src/*.sln  -p:PackageVersion=${{ steps.calculate_version.outputs.version }} --configuration Release --output ./artifacts
         
       - name: Publish packages 
         run: dotnet nuget push ./artifacts/**/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json --skip-duplicate true 
