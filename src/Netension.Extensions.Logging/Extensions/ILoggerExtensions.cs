@@ -10,5 +10,10 @@ namespace Netension.Extensions.Logging.Extensions
         {
             return logger.BeginScope(new Dictionary<string, object> { [key] = value });
         }
+
+        public static IDisposable BeginScope<TCategoryName>(this ILogger<TCategoryName> logger, string key, object value)
+        {
+            return logger.BeginScope(new Dictionary<string, object> { [key] = value });
+        }
     }
 }
