@@ -13,6 +13,18 @@ namespace Microsoft.AspNetCore.Http
             await response.WriteAsJsonAsync(content, cancellationToken).ConfigureAwait(false);
         }
 
+        public static async Task ConflictAsJsonAsync<TContent>(this HttpResponse response, TContent content, CancellationToken cancellationToken)
+        {
+            response.StatusCode = StatusCodes.Status409Conflict;
+            await response.WriteAsJsonAsync(content, cancellationToken).ConfigureAwait(false);
+        }
+
+        public static async Task NotFoundAsJsonAsync<TContent>(this HttpResponse response, TContent content, CancellationToken cancellationToken)
+        {
+            response.StatusCode = StatusCodes.Status404NotFound;
+            await response.WriteAsJsonAsync(content, cancellationToken).ConfigureAwait(false);
+        }
+
         public static async Task BadRequestAsJsonAsync<TContent>(this HttpResponse response, TContent content, CancellationToken cancellationToken)
         {
             response.StatusCode = StatusCodes.Status400BadRequest;
