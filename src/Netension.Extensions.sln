@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netension.Extensions.Correl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netension.Extensions.Security", "Netension.Extensions.Security\Netension.Extensions.Security.csproj", "{23CC0882-447F-4732-8E20-EE3E8DBEF651}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netension.Extensions.Logging", "Netension.Extensions.Logging\Netension.Extensions.Logging.csproj", "{D91E356D-A704-4EAA-9857-3D5B67D29485}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netension.Extensions.Logging", "Netension.Extensions.Logging\Netension.Extensions.Logging.csproj", "{D91E356D-A704-4EAA-9857-3D5B67D29485}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netension.Extensions.Http", "Netension.Extensions.Http\Netension.Extensions.Http.csproj", "{D3422637-B340-445A-A1E4-E61E6AD77792}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Netension.Extensions.Http", "Netension.Extensions.Http\Netension.Extensions.Http.csproj", "{D3422637-B340-445A-A1E4-E61E6AD77792}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Netension.Extensions.Testing", "Netension.Extensions.Testing\Netension.Extensions.Testing.csproj", "{1023881F-8B41-4450-A399-A45325FBC174}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D3422637-B340-445A-A1E4-E61E6AD77792}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3422637-B340-445A-A1E4-E61E6AD77792}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3422637-B340-445A-A1E4-E61E6AD77792}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1023881F-8B41-4450-A399-A45325FBC174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1023881F-8B41-4450-A399-A45325FBC174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1023881F-8B41-4450-A399-A45325FBC174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1023881F-8B41-4450-A399-A45325FBC174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
